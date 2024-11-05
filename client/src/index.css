@@ -1,0 +1,282 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Urbanist,system-ui,Avenir,helvetica,Arial,sans-serif;
+  color-scheme: light dark;
+
+}
+
+:root{
+  --bg-color:#f4f3ff;
+  --btn-color:#646cff;
+  --dark-color:#242424;
+  --helper-color:#99b9ff;
+  --bg1-color:#646cff;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  margin: 0;
+  min-width: 32rem;
+  min-height: 100vh;
+}
+
+h1{
+  font-size: 5.4rem;
+  line-height: 1.1;
+  font-weight: bold;
+  color: #646cff;
+}
+
+p,
+li,
+label,
+input,
+textarea{
+  font-size: 1.8rem;
+  line-height: 1.56;
+  letter-spacing: 0.1rem;
+  word-spacing: 0.06rem;
+}
+
+a{
+  font-weight: 500;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  color: var(--btn-color);
+  text-decoration: inherit;
+}
+
+.container{
+  max-width: 140rem;
+  padding: 4rem 2.4rem;
+  margin: 0 auto;
+}
+.grid{
+  display: grid;
+  gap:6.4rem;
+
+}
+
+.grid-two-cols{
+  grid-template-columns: repeat(2,1fr);
+}
+.grid-four-cols{
+  grid-template-columns: repeat(4,1fr);
+
+}
+
+button{
+  text-transform: capitalize;
+  padding: 0.6rem 1.2rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  background-color: var(--btn-color);
+  border-radius: 0.8rem;
+  border:0.1rem solid transparent;
+  cursor: pointer;
+  letter-spacing: 0.1rem;
+
+}
+
+.secondary-btn{
+  background-color: transparent;
+  box-shadow: inset 0 0 0.2rem var(--bg1-color);
+  margin-left:3.2rem;
+}
+
+
+/*? state rule*/
+button:hover{
+  box-shadow: inset 0 0 0.2rem var(--bg-color);
+}
+
+a:hover,
+a.active{
+  color: #535bf2;
+}
+.section-hero{
+  & .grid{
+    align-items: center;
+  }
+
+
+.hero-content{
+  & p{
+    margin: 2.4rem 0 4.8rem 0;
+    &:first-child{
+      margin: 0 0 1.2rem 0;
+    }
+
+  }
+
+}
+
+.hero-image{
+  display: flex;
+  justify-content: center;
+  &img{
+    width: 70%;
+    height: auto;
+  }
+}
+}
+
+.section-analytics{
+  margin: 9.6rem 0;
+
+  & .container{
+    background-color:#535bf2;
+    border-radius: 1rem;
+  }
+
+  & .div1{
+    text-align: center;
+    border-right: 0.2rem solid var(--dark-color);
+
+    &:last-child{
+      border:none;
+    }
+  }
+  &h2{
+    font-size: 4.8rem;
+  }
+  &p{
+    text-transform: capitalize;
+  }
+}
+
+
+/**** end hero ****/
+
+.section-contact{
+  & .contact-content{
+    padding: 0;
+
+    & h1{
+      margin-bottom: 3.2rem;
+
+    }
+  }
+
+  & .container{
+    padding-top: 3.2rem;
+  }
+  & .contact-img{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    & img{
+      width: 80%;
+      height: auto;
+    }
+
+  }
+
+  & .section-form{
+    & form{
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
+    & label{
+      display: block;
+      margin-bottom: 1.2rem;
+      text-transform: capitalize;
+    }
+
+    & input,
+    textarea {
+      width: 80%;
+      padding: 0.2rem 0.6rem;
+
+    }
+  }
+}
+
+
+/**** error page ****/
+
+
+#error-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#error-page.content{
+  max-width: 70rem;
+  text-align: center;
+}
+.content h2.header{
+  font-size: 18vw;
+  line-height: 1em;
+  text-align: center;
+  animation: animate 10s ease-in-out infinite;
+  background: -webkit-repeating-linear-gradient(
+    -60deg,
+    #71b7e6,
+    var(--btn-color),
+    #b98acc,
+    #ee8176,
+    var(--btn-color),
+    #9b59b6
+  );
+
+  background-size: 500%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.25);
+  position: relative;
+
+
+}
+.content h4.header2{
+font-size: 4.8rem;
+text-align: center;
+}
+
+.btn-group1{
+  padding-top: 3.2rem;
+  margin-left: 3.2rem;
+  & .secondarybtn{
+    background-color: transparent;
+    margin-left:3.2rem;
+    border-color: #535bf2;
+
+  }
+}
+
+
+
+/**** Registration ****/
+
+.section-registration{
+  padding: 0 3.2rem;
+
+  & .container{
+
+    padding-top: 3.2rem;
+    align-items: center;
+  }
+}
+
+& .registration-form{
+  & label{
+    display: block;
+    margin: 2.4rem 0 0.8rem 0;
+    text-transform: capitalize;
+  }
+  & input{
+    width: 80%;
+    padding: 0.6rem 0.6rem;
+  }
+  & button{
+    margin-top: 3.2rem;
+  }
+}
