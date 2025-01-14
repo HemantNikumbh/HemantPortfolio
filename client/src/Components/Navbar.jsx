@@ -24,7 +24,7 @@ export const Navbar = ()=>{
                         </li>
 
                         <li>
-                            <NavLink to="/Service">service</NavLink>
+                            <NavLink to="/Service">Service</NavLink>
                         </li>
 
                         <li>

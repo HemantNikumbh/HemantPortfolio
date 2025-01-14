@@ -1,9 +1,18 @@
 footer
 {
-    padding: 3.2rem;
-    text-align: left;
-    background-color: #646cff;
-    margin-top: 3.2rem;
-
+    background-color:#e2e3ff;
 }
 
+.Container{
+    display:flex;
+    padding: 2rem;
+    justify-content: space-between;
+    margin-top: 3rem;
+
+}
+ul{
+    display:flex;
+    gap:3.2rem;
+    list-style:none;
+
+}

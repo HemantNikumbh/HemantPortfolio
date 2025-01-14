@@ -67,8 +67,20 @@ a{
 }
 .grid-four-cols{
   grid-template-columns: repeat(4,1fr);
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 
 }
+.grid-three-cols{
+  grid-template-columns: repeat(3,1fr);
+
+}
+
+.card{
+    border-color:#646cff;
+    border:solid ;
+  }
+
 
 button{
   text-transform: capitalize;
@@ -124,6 +136,13 @@ a.active{
     height: auto;
   }
 }
+}
+
+img{
+  transition:box-shadow 0.3s ease;
+}
+img:hover{
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.6);
 }
 
 .section-analytics{
@@ -279,4 +298,45 @@ text-align: center;
   & button{
     margin-top: 3.2rem;
   }
+}
+
+/**** Admin-Users ****/
+td{
+  font-size: 1.7rem;
+  
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  text-align:center;
+}
+th{
+  font-size: 2rem;
+}
+table{
+  background :#e2e3ff;
+  box-shadow: rgba(255,255,255,0.2) 0px 7px 29px 0px;
+  border-collapse: collapse;
+  border-radius: 1rem;
+}
+
+body tr{
+  display:grid;
+  grid-template-columns: repeat(5,minmax(10rem,1fr));
+  align-items:center;
+  box-shadow: 0 0.3rem 0 gray;
+  margin-bottom: 10px;
+  border-bottom: 4px solid transparent;
+  color:black;
+  &:last-child{
+    box-shadow: none;
+  }
+
+}
+.textshadow{
+  color: white;
+  text-shadow: 1px 1px 2px black,0 0 25px blue,0 0 5px darkblue;
+}
+.dltbtn{
+  margin-top:3rem;
+  margin-bottom: 3rem;
+  margin-left: 24rem;
 }

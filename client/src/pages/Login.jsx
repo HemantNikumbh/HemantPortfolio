@@ -1,7 +1,7 @@
 import { useState } from "react";
 import{useNavigate} from  "react-router-dom"
 import { useAuth } from "../store/auth";
-
+import { toast } from 'react-toastify';
 
 export const Login = () =>{
     const [user,setUser] = useState({
@@ -46,14 +46,14 @@ export const Login = () =>{
                 //localStorage.setItem("token",res_data.token);
     
     
-                alert("Login Successfull")
+                toast.success("Login Successfull")
                 setUser({ email:"",password:""});
                 navigate("/")
     
+            }else{
+                toast.error("Please Fill All Field Properly")
             }
-    
-    
-            console.log(response)
+            //console.log(response)
     
            }catch(error){
             console.log("register",error);
